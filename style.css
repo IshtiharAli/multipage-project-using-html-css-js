@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300&family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,.6),rgba(4,9,30,.6)) , url(images/campus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+
+nav img{
+    width: 70px;
+    border-radius: 50px;
+}
+
+.nav-links{
+
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    font-size: 15px;
+}
+
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+.text-box{
+    color: #fff;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px ;
+    font-size: 14px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 34px;
+    border: 1px solid #fff;
+    font-size: 13px;
+    color: #fff;
+    background: transparent;
+    position: relative;
+}
+
+
+.btn:hover{
+    border: 1px solid #f44335;
+    background: #f44335;
+    transition: 1s;
+}
+
+
+nav .fa-solid{
+    display: none;
+    font-size: 20px;
+
+}
+
+
+
+/* Course section=============================== */
+
+.course{
+    width: 80%;
+    text-align: center;
+    padding-top: 100px;
+    margin: auto;
+}
+
+.course h1{
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.course p{
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.course .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.course .course-col{
+    background: #fff3f4;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    flex-basis: 31%;
+}
+
+.course .course-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+
+.course .course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0,0, .2);
+}
+
+
+
+/* Campus section start here =================== */
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.campus .campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus .campus-col img{
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+
+.campus .layer{
+    background:transparent;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.campus .layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+
+.campus .layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;   
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+}
+
+.campus .layer:hover h3{
+    opacity: 1;
+    bottom: 49%;
+}
+
+
+
+
+
+/* Responsive Quries ======================= */
+
+@media(max-width:700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #f44335;
+        right:-200px;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        text-align: left;
+        z-index: 2;
+        display: none;
+    }
+
+    nav img{
+        width: 50px;
+    }
+
+    
+
+    .nav-links ul{
+        padding: 30px;
+    }
+
+
+    nav .fa-solid{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .course .row{
+        flex-direction: column;
+    }
+
+    .campus .row{
+        flex-direction: column;
+    }
+
+
+
+    
+}
